@@ -1,6 +1,9 @@
 import pandas as pd
 
-DATA_PATH = "app/data/sales_data.csv"
+import os
+
+# Menyesuaikan path data agar bisa ditemukan saat backend dijalankan dari folder backend/
+DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..", "data", "sales_data.csv")
 
 def get_sales_data():
     df = pd.read_csv(DATA_PATH)

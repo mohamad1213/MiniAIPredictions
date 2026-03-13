@@ -1,7 +1,11 @@
 import joblib
 import numpy as np
 
-model = joblib.load("app/ml/model.pkl")
+import os
+
+# Menyesuaikan path model agar bisa ditemukan saat backend dijalankan dari folder backend/
+MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../..", "ml", "model.pkl")
+model = joblib.load(MODEL_PATH)
 
 def predict_sales(jumlah_penjualan, harga, diskon):
 
