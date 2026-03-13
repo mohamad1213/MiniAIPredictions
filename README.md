@@ -2,15 +2,7 @@
 
 Sistem ini dikembangkan untuk mengelola data penjualan, menampilkan dashboard analitik sederhana, dan melakukan prediksi status produk (**Laris / Tidak Laris**) menggunakan model Machine Learning terintegrasi.
 
-## 🚀 Fitur Utama
-- **Autentikasi JWT**: Sistem login aman menggunakan token JWT.
-- **Dashboard Penjualan**: Tabel interaktif untuk memonitor data stok dan penjualan.
-- **Prediksi Machine Learning**: Form cerdas untuk memprediksi potensi penjualan produk baru.
-- **Responsive UI**: Tampilan yang menyesuaikan dengan perangkat pengguna (Desktop/Mobile).
-
----
-
-## 🏗️ Arsitektur Sistem
+## Arsitektur Sistem
 
 ![Arsitektur Sistem](screenshoots/arsitektur.png)
 
@@ -21,14 +13,14 @@ Sistem ini dikembangkan untuk mengelola data penjualan, menampilkan dashboard an
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend**: React JS, Vite, Lucide Icons.
 - **Backend**: Python, FastAPI, Uvicorn, Jose (JWT).
 - **Machine Learning**: Scikit-Learn (Decision Tree), Pandas, NumPy, Joblib.
 
 ---
 
-## 📂 Struktur Proyek
+## Struktur Proyek
 ```text
 project-root/
 ├── backend/            # FastAPI Implementation
@@ -46,7 +38,7 @@ project-root/
 
 ---
 
-## 💻 Cara Menjalankan Project
+## Cara Menjalankan Project
 
 ### 1. Clone Repository
 ```bash
