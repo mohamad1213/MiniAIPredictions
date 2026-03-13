@@ -12,34 +12,7 @@ Sistem ini dikembangkan untuk mengelola data penjualan, menampilkan dashboard an
 
 ## 🏗️ Arsitektur Sistem
 
-```mermaid
-graph TD
-    subgraph Frontend
-        A[React JS UI] --> B[Login Page]
-        A --> C[Dashboard]
-        C --> D[Sales Table]
-        C --> E[Predict Form]
-    end
-
-    subgraph Backend
-        F[FastAPI Server] --> G[Auth Router]
-        F --> H[Sales Router]
-        F --> I[Predict Router]
-        
-        G --> J[JWT Security]
-        H --> K[CSV Data Service]
-        I --> L[ML Inference Service]
-    end
-
-    subgraph Data & ML
-        M[sales_data.csv] --> K
-        N[model.pkl] --> L
-        O[trainmodel.py] --> N
-        M --> O
-    end
-
-    A -- REST API (JSON) --> F
-```
+![Arsitektur Sistem](screenshoots/arsitektur.png)
 
 ### Penjelasan Alur Data:
 1. **Login**: User memasukkan kredensial admin. Backend memverifikasi dan mengembalikan JWT Token.
@@ -75,9 +48,21 @@ project-root/
 
 ## 💻 Cara Menjalankan Project
 
-### 1. Persiapan Backend
+### 1. Clone Repository
+```bash
+git clone https://github.com/mohamad1213/MiniAIPredictions.git
+cd MiniAIPredictions
+```
+
+### 2. Persiapan Backend
 ```bash
 cd backend
+# Membuat virtual environment (opsional tapi disarankan)
+python -m venv .venv
+source .venv/bin/activate  # Linux/macOS
+# atau
+.venv\Scripts\activate     # Windows
+
 # Install dependencies
 pip install -r requirements.txt
 # Run the server
@@ -85,9 +70,9 @@ python run.py
 ```
 *API akan berjalan di http://localhost:8000 dan dokumentasi Swagger tersedia di http://localhost:8000/docs*
 
-### 2. Persiapan Frontend
+### 3. Persiapan Frontend
 ```bash
-cd frontend
+cd ../frontend
 # Install dependencies
 npm install
 # Run the dev server
@@ -112,6 +97,9 @@ python ml/trainmodel.py
 ---
 
 ## 📸 Screenshots
-*(Tersedia di folder /screenshoots)*
-1. Login Page
-2. Dashboard (Table & Predict Form)
+
+### 1. Login Page
+![Login Page](screenshoots/login.png)
+
+### 2. Dashboard (Table & Predict Form)
+![Dashboard Page](screenshoots/dashboard.png)
