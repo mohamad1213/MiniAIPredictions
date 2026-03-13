@@ -22,7 +22,7 @@ Sistem ini dikembangkan untuk mengelola data penjualan, menampilkan dashboard an
 
 ## API Endpoints
 
-- **POST /login**: Digunakan untuk autentikasi user.
+- **POST /auth/login**: Digunakan untuk autentikasi user.
 - **GET /sales**: Mengambil data penjualan dari dataset CSV.
 - **POST /predict**: Melakukan prediksi status produk berdasarkan input data.
 
