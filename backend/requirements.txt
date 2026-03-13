@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+pydantic
+scikit-learn
+pandas
+numpy
+joblib
+python-dotenv
+python-jose
+passlib[bcrypt]
