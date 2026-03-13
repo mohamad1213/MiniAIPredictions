@@ -20,6 +20,14 @@ Sistem ini dikembangkan untuk mengelola data penjualan, menampilkan dashboard an
 
 ---
 
+## API Endpoints
+
+- **POST /login**: Digunakan untuk autentikasi user.
+- **GET /sales**: Mengambil data penjualan dari dataset CSV.
+- **POST /predict**: Melakukan prediksi status produk berdasarkan input data.
+
+---
+
 ## Struktur Proyek
 ```text
 project-root/
@@ -80,7 +88,7 @@ python ml/trainmodel.py
 
 ---
 
-## 📝 Design Decisions & Asumsi
+## Design Decisions & Asumsi
 1. **Model ML**: Menggunakan `DecisionTreeClassifier` karena kemampuannya menangani fitur kategorikal/numerik secara efisien untuk klasifikasi biner dan mudah diinterpretasikan.
 2. **Asumsi Data**: User diasumsikan login sebagai admin (username: `admin`, password: `admin`).
 3. **Keamanan**: JWT digunakan untuk membatasi akses endpoint API (Meskipun di demo ini diimplementasikan secara sederhana).
@@ -88,7 +96,7 @@ python ml/trainmodel.py
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### 1. Login Page
 ![Login Page](screenshoots/login.png)
